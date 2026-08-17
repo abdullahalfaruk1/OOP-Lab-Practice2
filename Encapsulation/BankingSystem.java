@@ -39,3 +39,19 @@ class BankAccount {
         }
     }
 }
+
+public class BankingSystem {
+    public static void main(String[] args) {
+
+        BankAccount b = new BankAccount();
+
+        b.setAccountNumber(1001);
+        b.setBalance(5000);
+
+        b.deposit(2000);
+        b.withdraw(1000);
+
+        System.out.println("Account Number: " + b.getAccountNumber());
+        System.out.println("Balance: " + b.getBalance());
+    }
+}
