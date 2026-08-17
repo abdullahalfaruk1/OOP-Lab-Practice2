@@ -4,7 +4,7 @@ class Student {
     private String name;
     private int age;
 
-    public Void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -17,11 +17,17 @@ class Student {
     }
 
     public int getAge() {
-        return age
+        return age;
     }
 
 }
 
 public class BasicEncapsulation {
-
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.setName("Faruk");
+        s.setAge(24);
+        System.out.println("Name: " + s.getName());
+        System.out.println("Age: " + s.getAge());
+    }
 }
