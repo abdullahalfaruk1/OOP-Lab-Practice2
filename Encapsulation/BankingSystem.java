@@ -1,4 +1,5 @@
 package Encapsulation;
+
 class BankAccount {
 
     private int accountNumber;
@@ -19,3 +20,22 @@ class BankAccount {
             System.out.println("Invalid balance");
         }
     }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance = balance + amount;
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance = balance - amount;
+        } else {
+            System.out.println("Invalid withdrawal");
+        }
+    }
+}
